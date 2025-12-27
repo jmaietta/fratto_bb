@@ -1,13 +1,13 @@
 const CACHE_NAME = 'fratto-baseball-v1';
 const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/thomas-fratto-square_.webp',
-  '/Eckerd_tritons_ec_mark_svg.png',
-  '/og-image.png',
-  '/icon-192.png',
-  '/icon-512.png',
+  './',
+  './index.html',
+  './styles.css',
+  './thomas-fratto-square_.webp',
+  './Eckerd_tritons_ec_mark_svg.png',
+  './og-image.png',
+  './icon-192.png',
+  './icon-512.png',
   'https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap'
 ];
 
@@ -60,7 +60,7 @@ self.addEventListener('fetch', (event) => {
       .catch(() => {
         // Offline fallback for HTML pages
         if (event.request.headers.get('accept').includes('text/html')) {
-          return caches.match('/index.html');
+          return caches.match('./index.html');
         }
       })
   );
