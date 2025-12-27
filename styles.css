@@ -936,7 +936,7 @@ a:focus-visible {
 }
 
 .contact-role {
-  margin: 4px 0 24px;
+  margin: 4px 0 20px;
   font-size: 14px;
   color: var(--white-muted);
 }
@@ -945,39 +945,43 @@ a:focus-visible {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
 }
 
 .contact-methods li {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
-  border-top: 1px solid var(--white-line);
 }
 
-.contact-type {
+.contact-icon-btn {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: var(--white-muted);
-}
-
-.contact-type svg {
-  flex-shrink: 0;
-  opacity: 0.7;
-}
-
-.contact-value {
-  font-size: 14px;
-  font-weight: 500;
+  gap: 6px;
+  padding: 16px 20px;
+  background: var(--white-faint);
+  border: 1px solid var(--white-line);
+  border-radius: var(--radius-sm);
   color: var(--white);
-  transition: color var(--duration) var(--ease);
+  font-size: 12px;
+  font-weight: 500;
+  transition: all var(--duration) var(--ease);
 }
 
-a.contact-value:hover {
+.contact-icon-btn:hover {
+  background: rgba(0, 180, 160, 0.15);
+  border-color: var(--teal);
   color: var(--teal);
+  transform: translateY(-2px);
+}
+
+.contact-icon-btn svg {
+  opacity: 0.9;
+}
+
+.contact-icon-btn:hover svg {
+  opacity: 1;
 }
 
 /* =========================================================
@@ -1115,6 +1119,10 @@ a.contact-value:hover {
   .contact-card {
     padding: 24px;
   }
+  
+  .contact-icon-btn {
+    padding: 10px 12px;
+  }
 }
 
 /* Ensure consistent video card sizing on mobile */
@@ -1226,6 +1234,20 @@ a.contact-value:hover {
   
   .contact-card h3 {
     font-size: 18px;
+  }
+  
+  .contact-methods {
+    gap: 8px;
+  }
+  
+  .contact-icon-btn {
+    padding: 12px 14px;
+    font-size: 11px;
+  }
+  
+  .contact-icon-btn svg {
+    width: 18px;
+    height: 18px;
   }
 }
 
