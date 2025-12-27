@@ -4,12 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Thomas Fratto — Baseball</title>
-  <meta name="description" content="Thomas Fratto — Eckerd College baseball profile: videos, measurables, curated media, and contact." />
+  <meta name="description" content="Thomas Fratto — Eckerd College baseball profile: videos, measurables, and contact." />
 
+  <!-- Inter (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Your stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 
   <meta property="og:title" content="Thomas Fratto — Baseball" />
-  <meta property="og:description" content="Videos, measurables, curated media, and contact." />
+  <meta property="og:description" content="Videos, measurables, and contact." />
   <meta property="og:type" content="website" />
 </head>
 
@@ -29,6 +35,7 @@
   <section class="hero" id="top">
     <div class="container hero-inner">
       <div class="hero-media">
+        <!-- Place thomas-fratto-square.webp in the repo root -->
         <img
           class="portrait"
           src="thomas-fratto-square.webp"
@@ -68,7 +75,7 @@
   </section>
 
   <main id="main" class="container">
-    <!-- VIDEOS (visual thumbnails, no “single highlight reel”) -->
+    <!-- VIDEOS: visual thumbnails (no single “highlight reel”) -->
     <section class="section" id="videos" aria-labelledby="videos-title">
       <div class="section-head">
         <h2 id="videos-title">Featured videos</h2>
@@ -76,8 +83,8 @@
       </div>
 
       <div class="video-grid" role="list">
-        <!-- Video 1 -->
-        <a class="video-card" role="listitem"
+        <!-- Featured (spans 2 columns on desktop via .featured) -->
+        <a class="video-card featured" role="listitem"
            href="https://www.youtube.com/watch?v=GyiX662Axgs" target="_blank" rel="noreferrer"
            aria-label="Watch YouTube video: Highlight 1">
           <div class="thumb">
@@ -95,7 +102,6 @@
           </div>
         </a>
 
-        <!-- Video 2 -->
         <a class="video-card" role="listitem"
            href="https://www.youtube.com/watch?v=iXXUDTbzrnU" target="_blank" rel="noreferrer"
            aria-label="Watch YouTube video: Highlight 2">
@@ -114,7 +120,6 @@
           </div>
         </a>
 
-        <!-- Video 3 -->
         <a class="video-card" role="listitem"
            href="https://youtu.be/_6B4Cj_aQnU?si=kjo2rsNTbteWaK6k" target="_blank" rel="noreferrer"
            aria-label="Watch YouTube video: Highlight 3">
@@ -141,7 +146,7 @@
       </div>
     </section>
 
-    <!-- Snapshot (still useful for scouts) -->
+    <!-- Snapshot -->
     <section class="section" aria-labelledby="snapshot-title">
       <div class="section-head">
         <h2 id="snapshot-title">At a glance</h2>
@@ -173,9 +178,8 @@
         <div class="panel">
           <h3>Notes</h3>
           <p class="subtext" style="margin-top:0;">
-            Add measurable metrics or season notes here if desired (optional).
+            Optional: add measurable metrics, academic info, or season notes here.
           </p>
-          <p class="meta">Updated: 2025–2026</p>
         </div>
       </div>
     </section>
