@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Thomas Fratto — Baseball | Eckerd College</title>
   <meta name="description" content="Thomas Fratto — Eckerd College baseball profile: videos, measurables, and contact for coaches and scouts." />
+  <link rel="canonical" href="https://tfrattobaseball.com" />
 
   <link rel="icon" type="image/png" href="Eckerd_tritons_ec_mark_svg.png">
   <link rel="apple-touch-icon" href="icon-192.png">
@@ -24,7 +25,10 @@
   <meta property="og:title" content="Thomas Fratto — Baseball" />
   <meta property="og:description" content="Eckerd College Infielder. Videos, measurables, and contact." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="og-image.png" />
+  <meta property="og:url" content="https://tfrattobaseball.com" />
+  <meta property="og:image" content="https://tfrattobaseball.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tfrattobaseball.com/og-image.png" />
 </head>
 
 <body>
@@ -430,7 +434,7 @@
     // Register Service Worker for PWA
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
+        navigator.serviceWorker.register('./sw.js')
           .then((registration) => {
             console.log('SW registered:', registration.scope);
           })
