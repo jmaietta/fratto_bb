@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fratto-baseball-v2';
+const CACHE_NAME = 'fratto-baseball-v3';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
