@@ -136,20 +136,20 @@ a:focus-visible {
 
 .brand {
   display: flex;
-  align-items: baseline;
-  gap: 4px;
+  align-items: center;
+  gap: 10px;
 }
 
-.brand-name {
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.brand-text {
   font-family: var(--font-display);
-  font-size: 28px;
+  font-size: 22px;
   letter-spacing: 0.02em;
-}
-
-.brand-number {
-  font-family: var(--font-display);
-  font-size: 16px;
-  color: var(--teal);
 }
 
 .top-actions {
@@ -855,10 +855,8 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--navy-mid) 0%, var(--teal) 100%);
-  font-family: var(--font-display);
-  font-size: 28px;
-  color: var(--white);
+  background: var(--white);
+  padding: 8px;
 }
 
 .contact-card h3 {
