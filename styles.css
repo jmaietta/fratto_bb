@@ -773,8 +773,12 @@ a:focus-visible {
   margin: 0 auto;
 }
 
+.contact-grid.single {
+  max-width: 400px;
+}
+
 @media (min-width: 640px) {
-  .contact-grid {
+  .contact-grid:not(.single) {
     grid-template-columns: repeat(2, 1fr);
   }
 }
