@@ -1,6 +1,8 @@
 /* =========================================================
-   Thomas Fratto — Minimalist, visual-first profile theme
-   Full replacement styles.css
+   Mobile-first, visual-first profile theme (Inter)
+   - Single column by default (phones)
+   - Expands to 2/3 columns on larger screens
+   - Featured video tile spans 2 columns on desktop
    ========================================================= */
 
 :root{
@@ -17,26 +19,25 @@
   --hairline-2: rgba(15, 23, 42, 0.08);
   --shadow: 0 1px 2px rgba(15, 23, 42, 0.05), 0 14px 40px rgba(15, 23, 42, 0.06);
 
-  /* Radii */
+  /* Radius */
   --radius: 18px;
-  --radius-sm: 14px;
 
   /* Typography */
-  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+  --font: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
           "Apple Color Emoji","Segoe UI Emoji";
   --fs-body: 16px;
   --fs-small: 13px;
   --fs-kicker: 12px;
-  --fs-h2: 14px;
+  --fs-h2: 13px;
   --fs-h3: 16px;
-  --fs-lede: 18px;
-  --fs-head: clamp(38px, 4.6vw, 64px);
+  --fs-lede: 16px;
+  --fs-head: clamp(34px, 9vw, 54px);
 
-  /* Spacing */
+  /* Layout */
   --container: 1080px;
-  --pad: 20px;
+  --pad: 18px;
 
-  /* Interaction */
+  /* Motion */
   --ease: 140ms ease;
 }
 
@@ -55,21 +56,18 @@ body{
 }
 
 img{ max-width:100%; height:auto; display:block; }
-
 a{ color: inherit; }
+
 a:focus-visible{
   outline: 2px solid rgba(11,12,15,0.35);
   outline-offset: 4px;
   border-radius: 12px;
 }
 
-/* ---------------------------------------------------------
-   Accessibility: skip link
-   --------------------------------------------------------- */
+/* Skip link */
 .skip{
   position:absolute;
-  left:12px;
-  top:12px;
+  left:12px; top:12px;
   padding:10px 12px;
   background: var(--surface);
   border: 1px solid var(--hairline);
@@ -79,17 +77,15 @@ a:focus-visible{
 }
 .skip:focus{ transform: translateY(0); }
 
-/* ---------------------------------------------------------
-   Layout container
-   --------------------------------------------------------- */
+/* Container */
 .container{
   width: min(var(--container), calc(100% - 2 * var(--pad)));
   margin: 0 auto;
 }
 
-/* ---------------------------------------------------------
-   Top bar (sticky)
-   --------------------------------------------------------- */
+/* =========================================================
+   Top bar (mobile-first)
+   ========================================================= */
 .topbar{
   position: sticky;
   top: 0;
@@ -103,26 +99,30 @@ a:focus-visible{
   display:flex;
   align-items:center;
   justify-content: space-between;
-  padding: 14px 0;
+  padding: 12px 0;
+  gap: 10px;
 }
 
 .brand{
   text-decoration:none;
   font-weight: 650;
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .top-actions{
   display:flex;
-  gap: 10px;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
-/* Buttons (primary + ghost) */
+/* Buttons */
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding: 10px 14px;
+  padding: 9px 12px;
   border-radius: 999px;
   border: 1px solid rgba(11,12,15,0.14);
   background: var(--text);
@@ -139,18 +139,19 @@ a:focus-visible{
   border-color: rgba(11,12,15,0.14);
 }
 
-/* ---------------------------------------------------------
-   Hero
-   --------------------------------------------------------- */
+/* =========================================================
+   Hero (mobile-first)
+   - stacked layout
+   ========================================================= */
 .hero{
-  padding: 56px 0 18px;
+  padding: 28px 0 10px;
 }
 
 .hero-inner{
   display:grid;
-  grid-template-columns: 140px 1fr;
-  gap: 18px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  align-items: start;
   max-width: 980px;
 }
 
@@ -161,8 +162,8 @@ a:focus-visible{
 }
 
 .portrait{
-  width: 124px;
-  height: 124px;
+  width: 96px;
+  height: 96px;
   border-radius: 999px;
   object-fit: cover;
   border: 1px solid var(--hairline);
@@ -171,7 +172,7 @@ a:focus-visible{
 }
 
 .kicker{
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   font-size: var(--fs-kicker);
   color: var(--muted);
   letter-spacing: 0.12em;
@@ -183,16 +184,17 @@ a:focus-visible{
   font-size: var(--fs-head);
   line-height: 1.02;
   letter-spacing: -0.05em;
-  font-weight: 650;
+  font-weight: 700;
 }
 
 .lede{
-  margin: 14px 0 18px;
+  margin: 12px 0 14px;
   color: var(--muted);
   font-size: var(--fs-lede);
   max-width: 70ch;
 }
 
+/* Chips: touch-friendly on mobile */
 .chips{
   display:flex;
   flex-wrap: wrap;
@@ -205,7 +207,7 @@ a:focus-visible{
   padding: 10px 12px;
   border-radius: 999px;
   text-decoration:none;
-  background: rgba(255,255,255,0.78);
+  background: rgba(255,255,255,0.82);
   border: 1px solid rgba(15,23,42,0.10);
   transition: transform var(--ease), background var(--ease), border-color var(--ease);
 }
@@ -215,19 +217,19 @@ a:focus-visible{
   border-color: rgba(15,23,42,0.16);
 }
 
-/* ---------------------------------------------------------
-   Sections
-   --------------------------------------------------------- */
+/* =========================================================
+   Sections (mobile-first)
+   ========================================================= */
 .section{
-  padding: 34px 0;
+  padding: 26px 0;
 }
 
 .section-head{
   display:flex;
-  justify-content: space-between;
-  gap: 18px;
-  align-items: baseline;
-  margin-bottom: 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  margin-bottom: 12px;
 }
 
 .section-head h2{
@@ -244,9 +246,7 @@ a:focus-visible{
   font-size: var(--fs-small);
 }
 
-/* ---------------------------------------------------------
-   Panels (minimal cards)
-   --------------------------------------------------------- */
+/* Panel */
 .panel{
   background: var(--surface);
   border: 1px solid rgba(15,23,42,0.10);
@@ -262,12 +262,13 @@ a:focus-visible{
   font-weight: 650;
 }
 
-/* ---------------------------------------------------------
-   Visual video thumbnail grid
-   --------------------------------------------------------- */
+/* =========================================================
+   Video thumbnail gallery (mobile-first)
+   - single column by default
+   ========================================================= */
 .video-grid{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 14px;
 }
 
@@ -287,9 +288,7 @@ a:focus-visible{
   box-shadow: 0 1px 2px rgba(15,23,42,0.06), 0 18px 46px rgba(15,23,42,0.08);
 }
 
-.video-card:active{
-  transform: translateY(0);
-}
+.video-card:active{ transform: translateY(0); }
 
 .thumb{
   position:relative;
@@ -305,7 +304,7 @@ a:focus-visible{
   transform: scale(1.001);
 }
 
-/* Play badge: understated, premium */
+/* Play badge */
 .play{
   position:absolute;
   left: 14px;
@@ -330,13 +329,12 @@ a:focus-visible{
   border-bottom: 8px solid transparent;
 }
 
-/* Title/label under thumbnail */
 .video-meta{
   padding: 12px 14px 14px;
 }
 
 .video-title{
-  font-weight: 650;
+  font-weight: 700;
   letter-spacing: -0.01em;
 }
 
@@ -350,22 +348,21 @@ a:focus-visible{
   margin-top: 14px;
 }
 
-/* ---------------------------------------------------------
-   Grid blocks for other sections
-   --------------------------------------------------------- */
+/* =========================================================
+   Other grids (mobile-first: 1 col)
+   ========================================================= */
 .grid{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 14px;
 }
 
-/* Facts list (used in panels) */
+/* Facts list */
 .facts{
   list-style:none;
   padding:0;
   margin:0;
 }
-
 .facts li{
   display:flex;
   justify-content: space-between;
@@ -376,84 +373,7 @@ a:focus-visible{
 .facts li:last-child{ border-bottom: 0; }
 .facts li span:first-child{ color: var(--muted); }
 
-/* Link list: elegant underline */
+/* Link list */
 .linklist{
   margin:0;
-  padding-left: 18px;
-}
-.linklist li{ margin: 10px 0; }
-
-.linklist a{
-  text-decoration: none;
-  border-bottom: 1px solid rgba(15,23,42,0.18);
-  text-underline-offset: 3px;
-}
-.linklist a:hover{
-  border-bottom-color: rgba(15,23,42,0.38);
-}
-
-/* ---------------------------------------------------------
-   Contact block
-   --------------------------------------------------------- */
-.contact{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
-.contactlist{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-
-.contactlist li{
-  display:grid;
-  grid-template-columns: 90px 1fr;
-  gap: 12px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--hairline-2);
-}
-.contactlist li:last-child{ border-bottom: 0; }
-.contactlist span:first-child{ color: var(--muted); }
-
-/* ---------------------------------------------------------
-   Footer
-   --------------------------------------------------------- */
-.footer{
-  padding: 28px 0 46px;
-  color: var(--muted);
-  font-size: var(--fs-small);
-  border-top: 1px solid var(--hairline);
-}
-
-/* ---------------------------------------------------------
-   Responsive
-   --------------------------------------------------------- */
-@media (max-width: 980px){
-  .hero-inner{
-    grid-template-columns: 1fr;
-    justify-items: start;
-  }
-  .portrait{
-    width: 104px;
-    height: 104px;
-  }
-}
-
-@media (max-width: 900px){
-  .video-grid{ grid-template-columns: 1fr; }
-  .grid{ grid-template-columns: 1fr; }
-  .contact{ grid-template-columns: 1fr; }
-  .section-head{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-/* ---------------------------------------------------------
-   Reduced motion
-   --------------------------------------------------------- */
-@media (prefers-reduced-motion: reduce){
-  *{ transition: none !important; scroll-behavior: auto !important; }
-}
+  p
