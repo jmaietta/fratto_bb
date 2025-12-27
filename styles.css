@@ -46,6 +46,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -295,6 +296,8 @@ a:focus-visible {
 /* Hero Content */
 .hero-content {
   animation: fadeUp 0.8s var(--ease) both;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /* Hero intro: Photo + Name side by side on mobile */
@@ -321,6 +324,7 @@ a:focus-visible {
 .hero-intro-text {
   flex: 1;
   min-width: 0;
+  overflow: hidden;
 }
 
 .hero-intro-text .hero-badge {
@@ -329,6 +333,7 @@ a:focus-visible {
 
 .hero-intro-text .hero-name {
   line-height: 0.95;
+  word-break: break-word;
 }
 
 .hero-intro-text .name-first {
@@ -377,17 +382,26 @@ a:focus-visible {
 .hero-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 14px;
+  gap: 6px;
+  padding: 6px 10px;
   background: rgba(0, 180, 160, 0.12);
   border: 1px solid rgba(0, 180, 160, 0.3);
   border-radius: 999px;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--teal);
   margin-bottom: 24px;
+}
+
+@media (min-width: 480px) {
+  .hero-badge {
+    gap: 8px;
+    padding: 8px 14px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
 }
 
 .badge-dot {
@@ -470,11 +484,19 @@ a:focus-visible {
 
 .hero-stats {
   display: flex;
-  gap: 32px;
+  flex-wrap: wrap;
+  gap: 20px;
   margin-top: 32px;
-  padding: 24px 0;
+  padding: 20px 0;
   border-top: 1px solid var(--white-line);
   border-bottom: 1px solid var(--white-line);
+}
+
+@media (min-width: 480px) {
+  .hero-stats {
+    gap: 32px;
+    padding: 24px 0;
+  }
 }
 
 .stat {
@@ -485,9 +507,15 @@ a:focus-visible {
 
 .stat-value {
   font-family: var(--font-display);
-  font-size: 36px;
+  font-size: 28px;
   letter-spacing: 0.02em;
   color: var(--white);
+}
+
+@media (min-width: 480px) {
+  .stat-value {
+    font-size: 36px;
+  }
 }
 
 .stat-label {
@@ -946,6 +974,7 @@ a:focus-visible {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
 }
@@ -959,14 +988,21 @@ a:focus-visible {
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  padding: 16px 20px;
+  padding: 12px 14px;
   background: var(--white-faint);
   border: 1px solid var(--white-line);
   border-radius: var(--radius-sm);
   color: var(--white);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   transition: all var(--duration) var(--ease);
+}
+
+@media (min-width: 480px) {
+  .contact-icon-btn {
+    padding: 16px 20px;
+    font-size: 12px;
+  }
 }
 
 .contact-icon-btn:hover {
@@ -1117,11 +1153,17 @@ a:focus-visible {
   }
   
   .contact-card {
-    padding: 24px;
+    padding: 20px 12px;
   }
   
   .contact-icon-btn {
-    padding: 10px 12px;
+    padding: 8px 10px;
+    font-size: 9px;
+  }
+  
+  .contact-icon-btn svg {
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -1223,7 +1265,7 @@ a:focus-visible {
 /* Contact mobile */
 @media (max-width: 639px) {
   .contact-card {
-    padding: 28px 20px;
+    padding: 24px 16px;
     border-radius: var(--radius-sm);
   }
   
@@ -1241,8 +1283,9 @@ a:focus-visible {
   }
   
   .contact-icon-btn {
-    padding: 12px 14px;
-    font-size: 11px;
+    padding: 10px 12px;
+    font-size: 10px;
+    gap: 4px;
   }
   
   .contact-icon-btn svg {
