@@ -957,8 +957,16 @@ a:focus-visible {
 }
 
 .contact-type {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 13px;
   color: var(--white-muted);
+}
+
+.contact-type svg {
+  flex-shrink: 0;
+  opacity: 0.7;
 }
 
 .contact-value {
