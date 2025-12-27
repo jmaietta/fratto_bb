@@ -133,31 +133,62 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 0;
+  padding: 12px 0;
+  gap: 12px;
 }
 
 .brand {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .brand-logo {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
 }
 
 .brand-text {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 18px;
   letter-spacing: 0.02em;
+}
+
+@media (min-width: 480px) {
+  .brand-logo {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .brand-text {
+    font-size: 22px;
+  }
 }
 
 .top-actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* Smaller contact button on mobile */
+.top-actions .btn.primary {
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+@media (min-width: 480px) {
+  .top-actions {
+    gap: 8px;
+  }
+  
+  .top-actions .btn.primary {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
 }
 
 .nav-link {
@@ -263,6 +294,72 @@ a:focus-visible {
 /* Hero Content */
 .hero-content {
   animation: fadeUp 0.8s var(--ease) both;
+}
+
+/* Hero intro: Photo + Name side by side on mobile */
+.hero-intro {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.hero-portrait-mobile {
+  flex-shrink: 0;
+}
+
+.portrait-img-mobile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--teal);
+  box-shadow: 0 4px 20px rgba(0, 180, 160, 0.3);
+}
+
+.hero-intro-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-intro-text .hero-badge {
+  margin-bottom: 8px;
+}
+
+.hero-intro-text .hero-name {
+  line-height: 0.95;
+}
+
+.hero-intro-text .name-first {
+  font-size: clamp(28px, 8vw, 48px);
+}
+
+.hero-intro-text .name-last {
+  font-size: clamp(36px, 10vw, 64px);
+}
+
+/* Hide mobile portrait on desktop, show large portrait instead */
+@media (min-width: 900px) {
+  .hero-intro {
+    display: block;
+    margin-bottom: 24px;
+  }
+  
+  .hero-portrait-mobile {
+    display: none;
+  }
+  
+  .hero-intro-text .hero-badge {
+    margin-bottom: 24px;
+  }
+  
+  .hero-intro-text .name-first {
+    font-size: clamp(48px, 12vw, 100px);
+  }
+  
+  .hero-intro-text .name-last {
+    font-size: clamp(64px, 16vw, 140px);
+  }
 }
 
 @keyframes fadeUp {
@@ -407,13 +504,19 @@ a:focus-visible {
   margin-top: 32px;
 }
 
-/* Portrait */
+/* Portrait - Desktop only (hidden on mobile) */
 .hero-portrait {
+  display: none;
   position: relative;
-  display: flex;
   align-items: center;
   justify-content: center;
   animation: fadeUp 0.8s var(--ease) 0.2s both;
+}
+
+@media (min-width: 900px) {
+  .hero-portrait {
+    display: flex;
+  }
 }
 
 .portrait-frame {
@@ -947,12 +1050,21 @@ a.contact-value:hover {
     --radius: 12px;
   }
   
-  .hero-name .name-first {
-    font-size: 42px;
+  .portrait-img-mobile {
+    width: 80px;
+    height: 80px;
   }
   
-  .hero-name .name-last {
-    font-size: 56px;
+  .hero-intro {
+    gap: 12px;
+  }
+  
+  .hero-intro-text .name-first {
+    font-size: 24px;
+  }
+  
+  .hero-intro-text .name-last {
+    font-size: 32px;
   }
   
   .hero-stats {
@@ -1025,32 +1137,22 @@ a.contact-value:hover {
   }
   
   .hero-inner {
-    gap: 32px;
-  }
-  
-  .hero-portrait {
-    order: -1;
-  }
-  
-  .portrait-img {
-    width: 160px;
-    height: 160px;
-  }
-  
-  .portrait-ring {
-    inset: -8px;
+    gap: 24px;
   }
   
   .hero-meta {
     gap: 8px 16px;
+    margin-top: 16px;
   }
   
   .hero-stats {
     padding: 20px 0;
+    margin-top: 20px;
   }
   
   .hero-actions {
     flex-direction: column;
+    margin-top: 24px;
   }
   
   .hero-actions .btn {
