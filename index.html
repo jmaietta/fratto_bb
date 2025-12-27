@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PLAYER NAME — Baseball</title>
-  <meta name="description" content="PLAYER NAME — Baseball profile: highlights, measurables, curated clips, and contact." />
+  <title>Thomas Fratto — Baseball</title>
+  <meta name="description" content="Thomas Fratto — Eckerd College baseball profile: highlights, measurables, curated clips, and contact." />
 
-  <!-- Cache-bust while you iterate -->
-  <link rel="stylesheet" href="styles.css?v=20251227a" />
+  <!-- ✅ points to your renamed file -->
+  <link rel="stylesheet" href="styles.css" />
 
-  <meta property="og:title" content="PLAYER NAME — Baseball" />
+  <meta property="og:title" content="Thomas Fratto — Baseball" />
   <meta property="og:description" content="Highlights, measurables, curated clips, and contact." />
   <meta property="og:type" content="website" />
 </head>
@@ -17,10 +17,10 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <!-- Top bar: actions live here (world-class = contact is an action, not a hero block) -->
+  <!-- Top bar: primary actions -->
   <header class="topbar">
     <div class="container topbar-inner">
-      <a class="brand" href="#top" aria-label="Back to top">PLAYER NAME</a>
+      <a class="brand" href="#top" aria-label="Back to top">Thomas Fratto</a>
       <nav class="top-actions" aria-label="Primary">
         <a class="btn ghost" href="#highlights">Highlights</a>
         <a class="btn" href="#contact">Contact</a>
@@ -28,23 +28,42 @@
     </div>
   </header>
 
-  <!-- Hero: identity + positioning only -->
+  <!-- Hero: identity + positioning (no contact dump here) -->
   <section class="hero" id="top">
     <div class="container hero-inner">
-      <p class="kicker">Baseball · Class of 2026</p>
-      <h1 class="headline">PLAYER NAME</h1>
+      <div class="hero-media">
+        <img
+          class="portrait"
+          src="thomas-fratto-square.webp"
+          width="300"
+          height="300"
+          loading="eager"
+          decoding="async"
+          alt="Thomas Fratto in Eckerd Tritons uniform" />
+      </div>
 
-      <p class="lede">
-        OF / RHP · COLLEGE NAME · 6'1" · 190 · B/T: R/R · City, ST
-      </p>
+      <div class="hero-copy">
+        <p class="kicker">Eckerd College · Baseball</p>
+        <h1 class="headline">Thomas Fratto</h1>
 
-      <div class="chips" aria-label="Quick links">
-        <a class="chip" href="https://youtube.com/..." target="_blank" rel="noreferrer">YouTube</a>
-        <a class="chip" href="https://x.com/..." target="_blank" rel="noreferrer">X</a>
-        <a class="chip" href="https://www.tiktok.com/@..." target="_blank" rel="noreferrer">TikTok</a>
-        <a class="chip" href="https://example.com" target="_blank" rel="noreferrer">Recruiting Profile</a>
-        <!-- Optional -->
-        <!-- <a class="chip" href="player-card.pdf" target="_blank" rel="noreferrer">Player Card (PDF)</a> -->
+        <p class="lede">
+          Infield · Junior · St. Petersburg, Florida<br />
+          6'0" · 205 · Bats: Left · Throws: Right
+        </p>
+
+        <div class="chips" aria-label="Quick links">
+          <a class="chip" href="https://eckerdtritons.com/sports/baseball/roster/thomas-fratto/5664" target="_blank" rel="noreferrer">
+            Eckerd Tritons Profile
+          </a>
+          <!-- Add these when you have them -->
+          <a class="chip" href="#highlights">Highlight Reel</a>
+          <a class="chip" href="#clips">Curated Clips</a>
+          <!-- Examples (replace with real links)
+          <a class="chip" href="https://youtube.com/..." target="_blank" rel="noreferrer">YouTube</a>
+          <a class="chip" href="https://x.com/..." target="_blank" rel="noreferrer">X</a>
+          <a class="chip" href="https://www.tiktok.com/@..." target="_blank" rel="noreferrer">TikTok</a>
+          -->
+        </div>
       </div>
     </div>
   </section>
@@ -54,15 +73,14 @@
     <section class="section" id="highlights" aria-labelledby="highlights-title">
       <div class="section-head">
         <h2 id="highlights-title">Highlight Reel</h2>
-        <p class="subtext">One best video. Everything else goes in curated clips.</p>
+        <p class="subtext">Replace VIDEO_ID with your YouTube highlight video ID.</p>
       </div>
 
       <div class="feature">
         <div class="media">
-          <!-- Replace VIDEO_ID -->
           <iframe
             src="https://www.youtube.com/embed/VIDEO_ID"
-            title="Highlight Reel"
+            title="Thomas Fratto Highlight Reel"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
         </div>
@@ -71,15 +89,12 @@
           <div class="panel">
             <h3>At a glance</h3>
             <ul class="facts">
-              <li><span>Positions</span><span>OF / RHP</span></li>
-              <li><span>School</span><span>COLLEGE NAME</span></li>
-              <li><span>Grad</span><span>2026</span></li>
-              <li><span>Height / Weight</span><span>6'1" / 190</span></li>
-              <li><span>Bats / Throws</span><span>R / R</span></li>
-              <!-- Optional performance metrics -->
-              <li><span>Exit velo</span><span>XX mph</span></li>
-              <li><span>OF velo</span><span>XX mph</span></li>
-              <li><span>60-yard</span><span>X.XX</span></li>
+              <li><span>Position</span><span>Infield</span></li>
+              <li><span>School</span><span>Eckerd College</span></li>
+              <li><span>Class</span><span>Junior</span></li>
+              <li><span>Height / Weight</span><span>6'0" / 205</span></li>
+              <li><span>Bats / Throws</span><span>L / R</span></li>
+              <li><span>Location</span><span>St. Petersburg, FL</span></li>
             </ul>
             <p class="meta">Updated: Month YYYY</p>
           </div>
@@ -87,50 +102,51 @@
           <div class="panel">
             <h3>Pinned clips</h3>
             <ul class="linklist">
-              <li><a href="https://youtu.be/..." target="_blank" rel="noreferrer">Game ABs — Fall 2025</a></li>
-              <li><a href="https://x.com/USER/status/ID" target="_blank" rel="noreferrer">Workout clip — Nov 2025</a></li>
-              <li><a href="https://www.tiktok.com/@USER/video/ID" target="_blank" rel="noreferrer">Training clip — Dec 2025</a></li>
+              <!-- Replace with your best 3 links -->
+              <li><a href="https://youtu.be/..." target="_blank" rel="noreferrer">Infield defense — (Month YYYY)</a></li>
+              <li><a href="https://x.com/USER/status/ID" target="_blank" rel="noreferrer">Game highlight — (Month YYYY)</a></li>
+              <li><a href="https://www.tiktok.com/@USER/video/ID" target="_blank" rel="noreferrer">Training clip — (Month YYYY)</a></li>
             </ul>
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- Curated clips: clean lists (fast + minimalist) -->
-    <section class="section" aria-labelledby="clips-title">
+    <!-- Curated clips -->
+    <section class="section" id="clips" aria-labelledby="clips-title">
       <div class="section-head">
         <h2 id="clips-title">Curated clips</h2>
-        <p class="subtext">Hand-picked. Label by date + context.</p>
+        <p class="subtext">Hand-picked (not a feed). Label by date + context.</p>
       </div>
 
       <div class="grid">
         <div class="panel">
           <h3>YouTube</h3>
           <ul class="linklist">
-            <li><a href="https://youtu.be/..." target="_blank" rel="noreferrer">Defensive reps — Oct 2025</a></li>
-            <li><a href="https://youtube.com/shorts/..." target="_blank" rel="noreferrer">Cage session — Dec 2025</a></li>
+            <li><a href="https://youtu.be/..." target="_blank" rel="noreferrer">At-bats — (Month YYYY)</a></li>
+            <li><a href="https://youtube.com/shorts/..." target="_blank" rel="noreferrer">Cage session — (Month YYYY)</a></li>
           </ul>
         </div>
 
         <div class="panel">
           <h3>X</h3>
           <ul class="linklist">
-            <li><a href="https://x.com/USER/status/ID" target="_blank" rel="noreferrer">Game highlight — Oct 2025</a></li>
-            <li><a href="https://x.com/USER/status/ID" target="_blank" rel="noreferrer">Showcase — Sep 2025</a></li>
+            <li><a href="https://x.com/USER/status/ID" target="_blank" rel="noreferrer">Play at short — (Month YYYY)</a></li>
+            <li><a href="https://x.com/USER/status/ID" target="_blank" rel="noreferrer">Game clip — (Month YYYY)</a></li>
           </ul>
         </div>
 
         <div class="panel">
           <h3>TikTok</h3>
           <ul class="linklist">
-            <li><a href="https://www.tiktok.com/@USER/video/ID" target="_blank" rel="noreferrer">BP session — Nov 2025</a></li>
-            <li><a href="https://www.tiktok.com/@USER/video/ID" target="_blank" rel="noreferrer">Throwing program — Oct 2025</a></li>
+            <li><a href="https://www.tiktok.com/@USER/video/ID" target="_blank" rel="noreferrer">Training — (Month YYYY)</a></li>
+            <li><a href="https://www.tiktok.com/@USER/video/ID" target="_blank" rel="noreferrer">Infield work — (Month YYYY)</a></li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Contact: its own section (not hero) -->
+    <!-- Contact -->
     <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="section-head">
         <h2 id="contact-title">Contact</h2>
@@ -139,26 +155,26 @@
 
       <div class="contact">
         <div class="panel">
-          <h3>Player</h3>
+          <h3>Thomas</h3>
           <ul class="contactlist">
-            <li><span>Email</span><a href="mailto:player@email.com">player@email.com</a></li>
-            <li><span>Phone</span><a href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a></li>
+            <!-- Replace with real info -->
+            <li><span>Email</span><span>Add email</span></li>
+            <li><span>Phone</span><span>Add phone</span></li>
           </ul>
         </div>
 
         <div class="panel">
-          <h3>Coach</h3>
+          <h3>Program / Coach</h3>
           <ul class="contactlist">
-            <li><span>Name</span><span>Coach Name</span></li>
-            <li><span>Email</span><a href="mailto:coach@email.com">coach@email.com</a></li>
-            <li><span>Phone</span><a href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a></li>
+            <!-- Replace if you want coach contact; otherwise keep the roster link -->
+            <li><span>Roster</span><a href="https://eckerdtritons.com/sports/baseball/roster/thomas-fratto/5664" target="_blank" rel="noreferrer">Eckerd profile page</a></li>
           </ul>
         </div>
       </div>
     </section>
 
     <footer class="footer">
-      <p>© <span id="year"></span> PLAYER NAME</p>
+      <p>© <span id="year"></span> Thomas Fratto</p>
     </footer>
   </main>
 
