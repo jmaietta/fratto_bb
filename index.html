@@ -1,211 +1,169 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PLAYER NAME — Baseball</title>
+  <meta name="description" content="PLAYER NAME — Baseball profile: highlights, measurables, curated clips, and contact." />
 
-    <title>PLAYER NAME — Baseball</title>
-    <meta
-      name="description"
-      content="PLAYER NAME — Baseball profile: highlights, measurables, curated clips, and contact."
-    />
+  <!-- Cache-bust while you iterate -->
+  <link rel="stylesheet" href="styles.css?v=20251227a" />
 
-    <!-- Optional: update to your custom domain once set -->
-    <!-- <link rel="canonical" href="https://yourcustomdomain.com/" /> -->
+  <meta property="og:title" content="PLAYER NAME — Baseball" />
+  <meta property="og:description" content="Highlights, measurables, curated clips, and contact." />
+  <meta property="og:type" content="website" />
+</head>
 
-    <!-- Cache-bust so you see CSS updates immediately -->
-    <link rel="stylesheet" href="styles.css?v=20251227" />
+<body>
+  <a class="skip" href="#main">Skip to content</a>
 
-    <meta property="og:title" content="PLAYER NAME — Baseball" />
-    <meta
-      property="og:description"
-      content="Highlights, measurables, curated clips, and contact."
-    />
-    <meta property="og:type" content="website" />
+  <!-- Top bar: actions live here (world-class = contact is an action, not a hero block) -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top" aria-label="Back to top">PLAYER NAME</a>
+      <nav class="top-actions" aria-label="Primary">
+        <a class="btn ghost" href="#highlights">Highlights</a>
+        <a class="btn" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Minimal responsive video helper (keeps CSS file unchanged) -->
-    <style>
-      .video {
-        position: relative;
-        padding-top: 56.25%;
-        border-radius: 16px;
-        overflow: hidden;
-      }
-      .video iframe {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
-      .tight {
-        margin-top: 10px;
-      }
-    </style>
-  </head>
+  <!-- Hero: identity + positioning only -->
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+      <p class="kicker">Baseball · Class of 2026</p>
+      <h1 class="headline">PLAYER NAME</h1>
 
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+      <p class="lede">
+        OF / RHP · COLLEGE NAME · 6'1" · 190 · B/T: R/R · City, ST
+      </p>
 
-    <header class="header">
-      <div class="container">
-        <div class="hero">
-          <div>
-            <h1 class="title">PLAYER NAME</h1>
+      <div class="chips" aria-label="Quick links">
+        <a class="chip" href="https://youtube.com/..." target="_blank" rel="noreferrer">YouTube</a>
+        <a class="chip" href="https://x.com/..." target="_blank" rel="noreferrer">X</a>
+        <a class="chip" href="https://www.tiktok.com/@..." target="_blank" rel="noreferrer">TikTok</a>
+        <a class="chip" href="https://example.com" target="_blank" rel="noreferrer">Recruiting Profile</a>
+        <!-- Optional -->
+        <!-- <a class="chip" href="player-card.pdf" target="_blank" rel="noreferrer">Player Card (PDF)</a> -->
+      </div>
+    </div>
+  </section>
 
-            <p class="subtitle">
-              Position(s): OF / RHP · COLLEGE NAME · Class of 2026 · B/T: R/R · 6'1" · 190
-            </p>
+  <main id="main" class="container">
+    <!-- Highlights: centerpiece -->
+    <section class="section" id="highlights" aria-labelledby="highlights-title">
+      <div class="section-head">
+        <h2 id="highlights-title">Highlight Reel</h2>
+        <p class="subtext">One best video. Everything else goes in curated clips.</p>
+      </div>
 
-            <div class="links" aria-label="Primary links">
-              <a class="pill" href="mailto:player@email.com">
-                <span>Email</span>
-              </a>
+      <div class="feature">
+        <div class="media">
+          <!-- Replace VIDEO_ID -->
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="Highlight Reel"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
 
-              <a class="pill" href="tel:+1XXXXXXXXXX">
-                <span>Phone</span>
-              </a>
-
-              <a class="pill" href="mailto:coach@email.com">
-                <span>Coach Contact</span>
-              </a>
-
-              <a class="pill" href="https://youtube.com/@CHANNEL_OR_VIDEO" target="_blank" rel="noreferrer">
-                <span>YouTube</span>
-              </a>
-
-              <a class="pill" href="https://x.com/USERNAME" target="_blank" rel="noreferrer">
-                <span>X</span>
-              </a>
-
-              <a class="pill" href="https://www.tiktok.com/@USERNAME" target="_blank" rel="noreferrer">
-                <span>TikTok</span>
-              </a>
-
-              <!-- Optional -->
-              <!-- <a class="pill" href="player-card.pdf" target="_blank" rel="noreferrer"><span>Player Card (PDF)</span></a> -->
-            </div>
+        <aside class="stack" aria-label="At a glance">
+          <div class="panel">
+            <h3>At a glance</h3>
+            <ul class="facts">
+              <li><span>Positions</span><span>OF / RHP</span></li>
+              <li><span>School</span><span>COLLEGE NAME</span></li>
+              <li><span>Grad</span><span>2026</span></li>
+              <li><span>Height / Weight</span><span>6'1" / 190</span></li>
+              <li><span>Bats / Throws</span><span>R / R</span></li>
+              <!-- Optional performance metrics -->
+              <li><span>Exit velo</span><span>XX mph</span></li>
+              <li><span>OF velo</span><span>XX mph</span></li>
+              <li><span>60-yard</span><span>X.XX</span></li>
+            </ul>
+            <p class="meta">Updated: Month YYYY</p>
           </div>
+
+          <div class="panel">
+            <h3>Pinned clips</h3>
+            <ul class="linklist">
+              <li><a href="https://youtu.be/..." target="_blank" rel="noreferrer">Game ABs — Fall 2025</a></li>
+              <li><a href="https://x.com/USER/status/ID" target="_blank" rel="noreferrer">Workout clip — Nov 2025</a></li>
+              <li><a href="https://www.tiktok.com/@USER/video/ID" target="_blank" rel="noreferrer">Training clip — Dec 2025</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Curated clips: clean lists (fast + minimalist) -->
+    <section class="section" aria-labelledby="clips-title">
+      <div class="section-head">
+        <h2 id="clips-title">Curated clips</h2>
+        <p class="subtext">Hand-picked. Label by date + context.</p>
+      </div>
+
+      <div class="grid">
+        <div class="panel">
+          <h3>YouTube</h3>
+          <ul class="linklist">
+            <li><a href="https://youtu.be/..." target="_blank" rel="noreferrer">Defensive reps — Oct 2025</a></li>
+            <li><a href="https://youtube.com/shorts/..." target="_blank" rel="noreferrer">Cage session — Dec 2025</a></li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>X</h3>
+          <ul class="linklist">
+            <li><a href="https://x.com/USER/status/ID" target="_blank" rel="noreferrer">Game highlight — Oct 2025</a></li>
+            <li><a href="https://x.com/USER/status/ID" target="_blank" rel="noreferrer">Showcase — Sep 2025</a></li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>TikTok</h3>
+          <ul class="linklist">
+            <li><a href="https://www.tiktok.com/@USER/video/ID" target="_blank" rel="noreferrer">BP session — Nov 2025</a></li>
+            <li><a href="https://www.tiktok.com/@USER/video/ID" target="_blank" rel="noreferrer">Throwing program — Oct 2025</a></li>
+          </ul>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main class="container" id="main">
-      <!-- HIGHLIGHTS -->
-      <section class="section" aria-labelledby="highlights-title">
-        <div class="section-head">
-          <h2 id="highlights-title">Highlight Reel</h2>
-          <p class="section-subtext">Keep this to one “best” video. Put extra clips below.</p>
+    <!-- Contact: its own section (not hero) -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="section-head">
+        <h2 id="contact-title">Contact</h2>
+        <p class="subtext">Scout-friendly, copyable, direct.</p>
+      </div>
+
+      <div class="contact">
+        <div class="panel">
+          <h3>Player</h3>
+          <ul class="contactlist">
+            <li><span>Email</span><a href="mailto:player@email.com">player@email.com</a></li>
+            <li><span>Phone</span><a href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a></li>
+          </ul>
         </div>
 
-        <div class="card">
-          <div class="video">
-            <!-- Replace VIDEO_ID -->
-            <iframe
-              src="https://www.youtube.com/embed/VIDEO_ID"
-              title="Highlight Reel"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
-
-          <p class="muted tight">Updated: Month YYYY</p>
+        <div class="panel">
+          <h3>Coach</h3>
+          <ul class="contactlist">
+            <li><span>Name</span><span>Coach Name</span></li>
+            <li><span>Email</span><a href="mailto:coach@email.com">coach@email.com</a></li>
+            <li><span>Phone</span><a href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a></li>
+          </ul>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SNAPSHOT / MEASURABLES -->
-      <section class="section" aria-labelledby="snapshot-title">
-        <div class="section-head">
-          <h2 id="snapshot-title">Snapshot</h2>
-          <p class="section-subtext">Fast facts for coaches/scouts.</p>
-        </div>
+    <footer class="footer">
+      <p>© <span id="year"></span> PLAYER NAME</p>
+    </footer>
+  </main>
 
-        <div class="card-grid">
-          <div class="card">
-            <h3>Measurables</h3>
-            <ul class="list">
-              <li>Height / Weight: 6'1" / 190</li>
-              <li>Bats / Throws: R / R</li>
-              <li>60-yard: XX.XX</li>
-              <li>IF/OF velo: XX mph</li>
-              <li>Exit velo: XX mph</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Academic</h3>
-            <ul class="list">
-              <li>School: COLLEGE NAME</li>
-              <li>Grad: 2026</li>
-              <li>Major: (optional)</li>
-              <li>GPA: (optional)</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Schedule / Links</h3>
-            <ul class="list">
-              <li>
-                Recruiting profile:
-                <a href="https://example.com" target="_blank" rel="noreferrer">Link</a>
-              </li>
-              <li>
-                Summer team / showcase:
-                <a href="https://example.com" target="_blank" rel="noreferrer">Link</a>
-              </li>
-              <li>
-                Full game footage:
-                <a href="https://youtube.com/playlist?list=..." target="_blank" rel="noreferrer">Playlist</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- CURATED CLIPS -->
-      <section class="section" aria-labelledby="clips-title">
-        <div class="section-head">
-          <h2 id="clips-title">Curated Clips</h2>
-          <p class="section-subtext">Hand-picked clips (not a feed). Title them by date and context.</p>
-        </div>
-
-        <div class="card-grid">
-          <div class="card">
-            <h3>YouTube</h3>
-            <ul class="list">
-              <li><a href="https://youtu.be/..." target="_blank" rel="noreferrer">Game ABs — Fall 2025</a></li>
-              <li><a href="https://youtube.com/shorts/..." target="_blank" rel="noreferrer">Cage session — Dec 2025</a></li>
-              <li><a href="https://youtu.be/..." target="_blank" rel="noreferrer">Defensive reps — Oct 2025</a></li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>X (Twitter)</h3>
-            <ul class="list">
-              <li><a href="https://x.com/USER/status/ID" target="_blank" rel="noreferrer">Workout clip — Nov 2025</a></li>
-              <li><a href="https://x.com/USER/status/ID" target="_blank" rel="noreferrer">Game highlight — Oct 2025</a></li>
-              <li><a href="https://x.com/USER/status/ID" target="_blank" rel="noreferrer">Showcase — Sep 2025</a></li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>TikTok</h3>
-            <ul class="list">
-              <li><a href="https://www.tiktok.com/@USER/video/ID" target="_blank" rel="noreferrer">Training clip — Dec 2025</a></li>
-              <li><a href="https://www.tiktok.com/@USER/video/ID" target="_blank" rel="noreferrer">BP session — Nov 2025</a></li>
-              <li><a href="https://www.tiktok.com/@USER/video/ID" target="_blank" rel="noreferrer">Throwing program — Oct 2025</a></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <footer class="footer">
-        <p class="muted">© <span id="year"></span> PLAYER NAME</p>
-      </footer>
-    </main>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
