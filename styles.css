@@ -790,6 +790,29 @@ a:focus-visible {
   margin: 0 auto;
 }
 
+.stats-years {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.stats-years .stats-card {
+  max-width: none;
+  width: 100%;
+}
+
+.stats-year-label {
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  color: var(--white-muted);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--white-line);
+}
+
 .stats-loading,
 .stats-error {
   text-align: center;
@@ -829,6 +852,8 @@ a:focus-visible {
   font-size: 32px;
   letter-spacing: 0.02em;
   color: var(--teal);
+  min-width: 70px;
+  text-align: center;
 }
 
 .stat-name {
@@ -887,6 +912,12 @@ a:focus-visible {
     padding: 20px 16px;
   }
   
+  .stats-year-label {
+    font-size: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+  }
+  
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
@@ -894,6 +925,7 @@ a:focus-visible {
   
   .stat-number {
     font-size: 28px;
+    min-width: 60px;
   }
   
   .stats-row {
