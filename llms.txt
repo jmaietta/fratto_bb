@@ -11,10 +11,15 @@
 - [Highlight Reel 2](https://www.youtube.com/watch?v=iXXUDTbzrnU): Highlights.
 - [Highlight Reel 3](https://youtu.be/_6B4Cj_aQnU?si=kjo2rsNTbteWaK6k): Highlights.
 
-## Career Statistics
+## Career Statistics — Northern Essex Community College (NECC)
+- [NECC Player Profile](https://neccknights.com/sports/bsb/2024-25/bios/fratto_thomas_5r5q)
 
-### 2024-2025 — Northern Essex Community College (NECC)
-- [NECC Player Profile](https://neccknights.com/sports/bsb/2023-24/players/thomasfratto9mnn)
+### 2025 Season
+- **AVG:** .407 | **OBP:** .563 | **SLG:** .627 | **OPS:** 1.190
+- **G:** 42 | **AB:** 118 | **H:** 48 | **R:** 35 | **RBI:** 39
+- **HR:** 3 | **2B:** 11 | **3B:** 3 | **BB:** 36 | **SB:** 14
+
+### 2024 Season
 - **AVG:** .295 | **OBP:** .452 | **SLG:** .527 | **OPS:** .979
 - **G:** 41 | **AB:** 129 | **H:** 38 | **R:** 36 | **RBI:** 37
 - **HR:** 6 | **2B:** 8 | **3B:** 2 | **BB:** 34 | **SB:** 15
