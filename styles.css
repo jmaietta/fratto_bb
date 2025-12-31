@@ -779,6 +779,142 @@ a:focus-visible {
 }
 
 /* =========================================================
+   STATS CARD
+   ========================================================= */
+.stats-card {
+  background: var(--navy);
+  border: 1px solid var(--white-line);
+  border-radius: var(--radius);
+  padding: 32px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.stats-loading,
+.stats-error {
+  text-align: center;
+  color: var(--white-muted);
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+.school-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--teal);
+  font-weight: 500;
+  transition: opacity var(--duration) var(--ease);
+}
+
+.school-link:hover {
+  opacity: 0.8;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 32px;
+  letter-spacing: 0.02em;
+  color: var(--teal);
+}
+
+.stat-name {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white-muted);
+}
+
+.stats-divider {
+  height: 1px;
+  background: var(--white-line);
+  margin: 24px 0;
+}
+
+.stats-table {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  text-align: center;
+}
+
+.stats-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 8px;
+  background: var(--white-faint);
+  border-radius: var(--radius-sm);
+}
+
+.cell-value {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--white);
+}
+
+.cell-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white-muted);
+}
+
+/* Stats mobile */
+@media (max-width: 479px) {
+  .stats-card {
+    padding: 20px 16px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .stat-number {
+    font-size: 28px;
+  }
+  
+  .stats-row {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+  }
+  
+  .stats-cell {
+    padding: 10px 4px;
+  }
+  
+  .cell-value {
+    font-size: 18px;
+  }
+  
+  .cell-label {
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
    INFO GRID
    ========================================================= */
 .info-grid {
