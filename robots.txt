@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://tfrattobaseball.com/sitemap.xml
+
+# AI/LLM agent information
+# See https://tfrattobaseball.com/llms.txt for structured profile data
