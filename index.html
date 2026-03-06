@@ -291,6 +291,26 @@
               </div>
             </div>
           </a>
+
+          <a class="video-card" role="listitem"
+             href="https://youtu.be/MKA48oBO4f8" target="_blank" rel="noreferrer"
+             aria-label="Watch video on YouTube">
+            <div class="video-thumb">
+              <img
+                src="https://img.youtube.com/vi/MKA48oBO4f8/maxresdefault.jpg"
+                alt="Video thumbnail"
+                loading="lazy"
+                decoding="async"
+                onerror="this.onerror=null;this.src='https://img.youtube.com/vi/MKA48oBO4f8/hqdefault.jpg';" />
+              <div class="video-overlay">
+                <div class="play-btn">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
 
 
@@ -675,7 +695,7 @@
     // Register Service Worker for PWA
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
+        navigator.serviceWorker.register('./sw.js?v=19')
           .then((registration) => {
             console.log('SW registered:', registration.scope);
           })
