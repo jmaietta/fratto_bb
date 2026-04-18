@@ -364,37 +364,37 @@
             <div class="stats-content">
               <div class="stats-grid">
                 <div class="stat-item">
-                  <span class="stat-number">.273</span>
+                  <span class="stat-number" id="stat-avg-2026">.000</span>
                   <span class="stat-name">AVG</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number">.529</span>
+                  <span class="stat-number" id="stat-obp-2026">.000</span>
                   <span class="stat-name">OBP</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number">.273</span>
+                  <span class="stat-number" id="stat-slg-2026">.000</span>
                   <span class="stat-name">SLG</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number">.802</span>
+                  <span class="stat-number" id="stat-ops-2026">.000</span>
                   <span class="stat-name">OPS</span>
                 </div>
               </div>
               <div class="stats-divider"></div>
               <div class="stats-table">
                 <div class="stats-row">
-                  <div class="stats-cell"><span class="cell-value">9</span><span class="cell-label">G</span></div>
-                  <div class="stats-cell"><span class="cell-value">11</span><span class="cell-label">AB</span></div>
-                  <div class="stats-cell"><span class="cell-value">3</span><span class="cell-label">H</span></div>
-                  <div class="stats-cell"><span class="cell-value">3</span><span class="cell-label">R</span></div>
-                  <div class="stats-cell"><span class="cell-value">1</span><span class="cell-label">RBI</span></div>
+                  <div class="stats-cell"><span class="cell-value" id="stat-g-2026">0</span><span class="cell-label">G</span></div>
+                  <div class="stats-cell"><span class="cell-value" id="stat-ab-2026">0</span><span class="cell-label">AB</span></div>
+                  <div class="stats-cell"><span class="cell-value" id="stat-h-2026">0</span><span class="cell-label">H</span></div>
+                  <div class="stats-cell"><span class="cell-value" id="stat-r-2026">0</span><span class="cell-label">R</span></div>
+                  <div class="stats-cell"><span class="cell-value" id="stat-rbi-2026">0</span><span class="cell-label">RBI</span></div>
                 </div>
                 <div class="stats-row">
-                  <div class="stats-cell"><span class="cell-value">0</span><span class="cell-label">HR</span></div>
-                  <div class="stats-cell"><span class="cell-value">0</span><span class="cell-label">2B</span></div>
-                  <div class="stats-cell"><span class="cell-value">0</span><span class="cell-label">3B</span></div>
-                  <div class="stats-cell"><span class="cell-value">5</span><span class="cell-label">BB</span></div>
-                  <div class="stats-cell"><span class="cell-value">1</span><span class="cell-label">HBP</span></div>
+                  <div class="stats-cell"><span class="cell-value" id="stat-hr-2026">0</span><span class="cell-label">HR</span></div>
+                  <div class="stats-cell"><span class="cell-value" id="stat-2b-2026">0</span><span class="cell-label">2B</span></div>
+                  <div class="stats-cell"><span class="cell-value" id="stat-3b-2026">0</span><span class="cell-label">3B</span></div>
+                  <div class="stats-cell"><span class="cell-value" id="stat-bb-2026">0</span><span class="cell-label">BB</span></div>
+                  <div class="stats-cell"><span class="cell-value" id="stat-hbp-2026">0</span><span class="cell-label">HBP</span></div>
                 </div>
               </div>
             </div>
@@ -677,6 +677,63 @@
   </main>
 
   <script>
+    /*
+      ===========================
+      EDIT ONLY THIS BLOCK
+      Update these season totals after each game.
+      Do NOT manually edit AVG / OBP / SLG / OPS above.
+      ===========================
+    */
+    const season2026 = {
+      g: 10,
+      ab: 14,
+      h: 3,
+      r: 3,
+      rbi: 1,
+      hr: 0,
+      doubles: 0,
+      triples: 0,
+      bb: 5,
+      hbp: 1,
+      sf: 0
+    };
+
+    function formatRate(value) {
+      return value.toFixed(3).replace(/^0/, '');
+    }
+
+    function safeDivide(a, b) {
+      return b === 0 ? 0 : a / b;
+    }
+
+    function render2026Stats(stats) {
+      const singles = stats.h - stats.doubles - stats.triples - stats.hr;
+      const tb = singles + (2 * stats.doubles) + (3 * stats.triples) + (4 * stats.hr);
+
+      const avg = safeDivide(stats.h, stats.ab);
+      const obp = safeDivide(stats.h + stats.bb + stats.hbp, stats.ab + stats.bb + stats.hbp + stats.sf);
+      const slg = safeDivide(tb, stats.ab);
+      const ops = obp + slg;
+
+      document.getElementById('stat-avg-2026').textContent = formatRate(avg);
+      document.getElementById('stat-obp-2026').textContent = formatRate(obp);
+      document.getElementById('stat-slg-2026').textContent = formatRate(slg);
+      document.getElementById('stat-ops-2026').textContent = formatRate(ops);
+
+      document.getElementById('stat-g-2026').textContent = stats.g;
+      document.getElementById('stat-ab-2026').textContent = stats.ab;
+      document.getElementById('stat-h-2026').textContent = stats.h;
+      document.getElementById('stat-r-2026').textContent = stats.r;
+      document.getElementById('stat-rbi-2026').textContent = stats.rbi;
+      document.getElementById('stat-hr-2026').textContent = stats.hr;
+      document.getElementById('stat-2b-2026').textContent = stats.doubles;
+      document.getElementById('stat-3b-2026').textContent = stats.triples;
+      document.getElementById('stat-bb-2026').textContent = stats.bb;
+      document.getElementById('stat-hbp-2026').textContent = stats.hbp;
+    }
+
+    render2026Stats(season2026);
+
     document.getElementById("year").textContent = new Date().getFullYear();
     
     // Obfuscated contact info (anti-scraping)
