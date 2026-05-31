@@ -1473,3 +1473,333 @@ a:focus-visible {
     font-size: 13px;
   }
 }
+
+/* =========================================================
+   MODERN REFRESH
+   ========================================================= */
+:root {
+  --navy: #07111f;
+  --navy-light: #0d1b2e;
+  --navy-mid: #16314d;
+  --teal: #17c9b2;
+  --teal-glow: rgba(23, 201, 178, 0.28);
+  --white-soft: rgba(255, 255, 255, 0.95);
+  --white-muted: rgba(226, 234, 242, 0.68);
+  --white-faint: rgba(255, 255, 255, 0.07);
+  --white-line: rgba(226, 234, 242, 0.14);
+  --surface: rgba(13, 27, 46, 0.74);
+  --surface-strong: rgba(8, 18, 31, 0.9);
+  --warm-line: rgba(238, 214, 154, 0.18);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow-sm: 0 6px 20px rgba(0, 0, 0, 0.22);
+  --shadow-md: 0 14px 40px rgba(0, 0, 0, 0.28);
+  --shadow-lg: 0 24px 70px rgba(0, 0, 0, 0.36);
+  --shadow-teal: 0 12px 34px rgba(23, 201, 178, 0.24);
+}
+
+body {
+  background:
+    radial-gradient(circle at 15% 0%, rgba(238, 214, 154, 0.05), transparent 28rem),
+    radial-gradient(circle at 95% 18%, rgba(23, 201, 178, 0.08), transparent 34rem),
+    var(--navy);
+}
+
+.topbar {
+  background: rgba(7, 17, 31, 0.78);
+  border-bottom-color: rgba(226, 234, 242, 0.1);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.brand-logo {
+  filter: drop-shadow(0 6px 14px rgba(23, 201, 178, 0.18));
+}
+
+.nav-link {
+  border-radius: 999px;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.btn {
+  border-radius: var(--radius-sm);
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #20d8c0, #9ee7da);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.btn.primary:hover {
+  background: linear-gradient(135deg, #3ee0ca, #c3f1e8);
+}
+
+.btn.ghost {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+}
+
+.hero {
+  min-height: 92vh;
+  min-height: 92dvh;
+  padding: 108px 0 72px;
+}
+
+.hero-bg {
+  background:
+    linear-gradient(90deg, rgba(7, 17, 31, 0.96) 0%, rgba(7, 17, 31, 0.82) 40%, rgba(7, 17, 31, 0.32) 100%),
+    linear-gradient(180deg, rgba(7, 17, 31, 0.18) 0%, rgba(7, 17, 31, 0.98) 100%),
+    url("Fratto_CVR_1.png") center right / cover no-repeat;
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 35%;
+  background: linear-gradient(180deg, transparent, var(--navy));
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero-badge {
+  background: rgba(7, 17, 31, 0.62);
+  border-color: rgba(23, 201, 178, 0.42);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.name-first,
+.name-last {
+  letter-spacing: 0;
+}
+
+.name-last {
+  background: linear-gradient(135deg, #ffffff 0%, #dce9ef 45%, #74ead8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.hero-meta {
+  gap: 10px;
+}
+
+.meta-item {
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.065);
+  border: 1px solid rgba(226, 234, 242, 0.12);
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(12px);
+}
+
+.meta-divider {
+  display: none;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 560px;
+  padding: 0;
+  border: 0;
+}
+
+.stat {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(226, 234, 242, 0.13);
+  border-radius: var(--radius);
+  backdrop-filter: blur(16px);
+}
+
+.stat-value {
+  line-height: 1;
+}
+
+.section {
+  position: relative;
+  padding: 88px 0;
+}
+
+.section-alt {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.01)),
+    var(--navy-light);
+}
+
+.section-label {
+  color: #9ee7da;
+}
+
+.label-line {
+  background: linear-gradient(90deg, var(--teal), rgba(238, 214, 154, 0.78));
+}
+
+.section-header h2 {
+  letter-spacing: 0;
+}
+
+.video-grid,
+.info-grid {
+  gap: 18px;
+}
+
+.video-card,
+.stats-card,
+.info-card,
+.contact-card {
+  background: var(--surface);
+  border-color: rgba(226, 234, 242, 0.13);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.045);
+}
+
+.video-card:hover,
+.info-card:hover,
+.contact-card:hover {
+  border-color: rgba(23, 201, 178, 0.48);
+  box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(7, 17, 31, 0.62));
+  pointer-events: none;
+}
+
+.video-overlay {
+  background: rgba(7, 17, 31, 0.08);
+}
+
+.play-btn {
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--navy);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+}
+
+.video-card:hover .play-btn {
+  background: var(--teal);
+}
+
+.stats-years {
+  max-width: 880px;
+}
+
+.stats-card {
+  padding: 24px;
+}
+
+.stats-year-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  margin-bottom: 18px;
+  padding: 6px 12px;
+  color: #e8edf3;
+  background: rgba(255, 255, 255, 0.065);
+  border: 1px solid rgba(226, 234, 242, 0.12);
+  border-radius: var(--radius-sm);
+}
+
+.stats-grid {
+  gap: 10px;
+}
+
+.stat-item,
+.stats-cell {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(226, 234, 242, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 14px 10px;
+}
+
+.stats-cell {
+  min-height: 70px;
+  justify-content: center;
+}
+
+.stat-number {
+  color: #84eadc;
+}
+
+.info-card,
+.contact-card {
+  padding: 24px;
+}
+
+.info-icon {
+  border: 1px solid rgba(23, 201, 178, 0.2);
+}
+
+.info-links a,
+.contact-icon-btn {
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.footer {
+  background: rgba(4, 11, 20, 0.72);
+  border-top: 1px solid rgba(226, 234, 242, 0.1);
+}
+
+@media (min-width: 640px) {
+  .hero-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .video-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .video-card:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .video-card:first-child .play-btn {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+@media (max-width: 899px) {
+  .hero-bg {
+    background:
+      linear-gradient(180deg, rgba(7, 17, 31, 0.72) 0%, rgba(7, 17, 31, 0.98) 78%),
+      url("Fratto_CVR_1.png") center top / cover no-repeat;
+  }
+}
+
+@media (max-width: 639px) {
+  .hero {
+    padding-top: 92px;
+    padding-bottom: 44px;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stat {
+    padding: 14px 12px;
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .stats-card {
+    padding: 18px 14px;
+  }
+}
