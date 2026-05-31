@@ -1644,6 +1644,30 @@ body {
   letter-spacing: 0;
 }
 
+.stats-section {
+  background: transparent;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.stats-section + .stats-section {
+  padding-top: 24px;
+}
+
+.stats-section .container {
+  position: relative;
+}
+
+.stats-section + .stats-section .container::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: var(--pad);
+  right: var(--pad);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(226, 234, 242, 0.14), transparent);
+}
+
 .video-grid,
 .info-grid {
   gap: 18px;
