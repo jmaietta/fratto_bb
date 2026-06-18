@@ -2148,3 +2148,61 @@ body {
   font-weight: 800;
   letter-spacing: 0;
 }
+
+/* Featured stat: OPS is the number scouts scan first — give it weight. */
+.stat-item.featured {
+  background: #eef6f0;
+  border-color: rgba(47, 111, 78, 0.4);
+  box-shadow: inset 0 0 0 1px rgba(47, 111, 78, 0.18);
+}
+
+.stat-item.featured .stat-number {
+  color: var(--field);
+  font-size: 38px;
+}
+
+.stat-item.featured .stat-name {
+  color: var(--field);
+  font-weight: 800;
+}
+
+@media (max-width: 479px) {
+  .stat-item.featured .stat-number {
+    font-size: 32px;
+  }
+}
+
+/* Honest context line on a small-sample stat card. */
+.stats-note {
+  margin: 0 0 16px;
+  padding: 8px 12px;
+  border-left: 3px solid var(--clay);
+  background: #f7efe5;
+  border-radius: var(--radius-sm);
+  color: #5c4a35;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* =========================================================
+   HERO STRENGTHS — owner-confirmed calling cards only
+   ========================================================= */
+.hero-strengths {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.strength {
+  padding: 7px 13px;
+  border: 1px solid rgba(245, 231, 192, 0.34);
+  border-radius: 999px;
+  background: rgba(245, 231, 192, 0.08);
+  color: #f5e7c0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
