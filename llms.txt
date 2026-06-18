@@ -16,9 +16,9 @@
 
 ## 2026 Summer — Covington Lumberjacks
 - [Valley Baseball League Profile](https://valleybaseballleague.com/sports/bsb/2026/players/thomasfrattoaae7)
-- **AVG:** .200 | **OBP:** .200 | **SLG:** .800 | **OPS:** 1.000
-- **G:** 1 | **AB:** 5 | **H:** 1 | **R:** 1 | **RBI:** 2
-- **HR:** 1 | **TB:** 4
+- **AVG:** .077 | **OBP:** .368 | **SLG:** .308 | **OPS:** .676
+- **G:** 6 | **PA:** 19 | **AB:** 13 | **H:** 1 | **R:** 3 | **RBI:** 2
+- **HR:** 1 | **TB:** 4 | **BB:** 5 | **HBP:** 1 | **SO:** 6
 
 ### 2025 Season
 - **AVG:** .407 | **OBP:** .563 | **SLG:** .627 | **OPS:** 1.190
