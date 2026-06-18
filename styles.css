@@ -482,6 +482,20 @@ a:focus-visible {
   }
 }
 
+.hero-summary {
+  max-width: 680px;
+  margin: 22px 0 0;
+  color: var(--white-soft);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+@media (min-width: 640px) {
+  .hero-summary {
+    font-size: 17px;
+  }
+}
+
 .hero-stats {
   display: flex;
   flex-wrap: wrap;

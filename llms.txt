@@ -1,8 +1,8 @@
 # Thomas Fratto — Baseball Prospect
-> Senior infield prospect at Eckerd College (Sunshine State Conference). Left-handed hitter, 6'0", 210 lbs. Available for transfer.
+> Senior infield prospect at Eckerd College (Sunshine State Conference). Left-handed hitter, 6'0", 210 lbs.
 
 ## Primary Profile
-- [Official Website](https://www.tfrattobaseball.com/): Central hub for scouting film, metrics, and transfer status.
+- [Official Website](https://www.tfrattobaseball.com/): Central hub for scouting film, metrics, recruiting information, and contact details.
 - [Eckerd Roster Page](https://eckerdtritons.com/sports/baseball/roster/thomas-fratto/5664): Official collegiate bio and verified game statistics.
 
 ## Video & Performance
@@ -34,7 +34,7 @@
 - **Position:** Infield (1B)
 - **Bats/Throws:** L / R
 - **Height/Weight:** 6'0" / 210 lbs
-- **Eligibility:** Senior (Available for transfer)
+- **Eligibility:** Senior
 - **Academics:** Eckerd College (NCAA DII)
 
 ## Contact Information
