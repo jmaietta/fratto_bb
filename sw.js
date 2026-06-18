@@ -1,8 +1,9 @@
-const CACHE_NAME = 'fratto-baseball-v27';
+const CACHE_NAME = 'fratto-baseball-v28';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './styles.css',
+  './favicon.ico',
   './thomas-fratto-square_.webp',
   './Eckerd_tritons_ec_mark_svg.png',
   './og-image.png',

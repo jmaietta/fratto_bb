@@ -1,8 +1,8 @@
 # Thomas Fratto — Baseball Prospect
-> Junior Infield prospect at Eckerd College (Sunshine State Conference). Left-handed hitter, 6'0", 205 lbs. Available for transfer.
+> Senior infield prospect at Eckerd College (Sunshine State Conference). Left-handed hitter, 6'0", 210 lbs. Available for transfer.
 
 ## Primary Profile
-- [Official Website](https://tfrattobaseball.com): Central hub for scouting film, metrics, and transfer status.
+- [Official Website](https://www.tfrattobaseball.com/): Central hub for scouting film, metrics, and transfer status.
 - [Eckerd Roster Page](https://eckerdtritons.com/sports/baseball/roster/thomas-fratto/5664): Official collegiate bio and verified game statistics.
 
 ## Video & Performance
@@ -13,6 +13,12 @@
 
 ## Career Statistics — Northern Essex Community College (NECC)
 - [NECC Player Profile](https://neccknights.com/sports/bsb/2024-25/bios/fratto_thomas_5r5q)
+
+## 2026 Summer — Covington Lumberjacks
+- [Valley Baseball League Profile](https://valleybaseballleague.com/sports/bsb/2026/players/thomasfrattoaae7)
+- **AVG:** .200 | **OBP:** .200 | **SLG:** .800 | **OPS:** 1.000
+- **G:** 1 | **AB:** 5 | **H:** 1 | **R:** 1 | **RBI:** 2
+- **HR:** 1 | **TB:** 4
 
 ### 2025 Season
 - **AVG:** .407 | **OBP:** .563 | **SLG:** .627 | **OPS:** 1.190
@@ -27,8 +33,8 @@
 ## Key Metrics
 - **Position:** Infield (1B)
 - **Bats/Throws:** L / R
-- **Height/Weight:** 6'0" / 205 lbs
-- **Eligibility:** Junior (Entering Transfer Portal)
+- **Height/Weight:** 6'0" / 210 lbs
+- **Eligibility:** Senior (Available for transfer)
 - **Academics:** Eckerd College (NCAA DII)
 
 ## Contact Information
