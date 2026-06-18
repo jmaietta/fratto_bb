@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1200px; height: 630px; }
+    body {
+      position: relative;
+      background:
+        radial-gradient(ellipse 70% 90% at 18% 40%, #161616 0%, transparent 60%),
+        linear-gradient(160deg, #0d0d0d 0%, #000000 100%);
+      font-family: "DM Sans", Arial, sans-serif;
+      color: #ffffff;
+      overflow: hidden;
+    }
+    .card {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      gap: 64px;
+      padding: 0 90px;
+    }
+    .portrait {
+      flex-shrink: 0;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #ffffff;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    }
+    .info { min-width: 0; }
+    .name {
+      font-family: "Bebas Neue", "Arial Narrow", "Arial Black", sans-serif;
+      font-weight: 400;
+      line-height: 0.86;
+      letter-spacing: 0.01em;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+    .name .first { font-size: 96px; color: #e9e9e9; }
+    .name .last { font-size: 132px; }
+    .rule {
+      width: 132px;
+      height: 6px;
+      background: #ffffff;
+      margin: 22px 0 20px;
+      border-radius: 3px;
+    }
+    .role {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #d8d8d8;
+    }
+    .school {
+      font-size: 28px;
+      font-weight: 500;
+      color: #ffffff;
+      margin-top: 8px;
+    }
+    .measure {
+      font-size: 26px;
+      font-weight: 500;
+      color: #b3b3b3;
+      margin-top: 22px;
+    }
+    .logo {
+      position: absolute;
+      top: 44px;
+      right: 56px;
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <img class="logo" src="Eckerd_tritons_ec_mark_svg.png" alt="" />
+  <div class="card">
+    <img class="portrait" src="thomas-fratto-square_.webp" alt="" />
+    <div class="info">
+      <div class="name">
+        <div class="first">Thomas</div>
+        <div class="last">Fratto</div>
+      </div>
+      <div class="rule"></div>
+      <div class="role">Infielder &nbsp;&bull;&nbsp; Senior</div>
+      <div class="school">Eckerd College Baseball</div>
+      <div class="measure">6'0" &nbsp;&bull;&nbsp; 210 lbs &nbsp;&bull;&nbsp; Bats L / Throws R</div>
+    </div>
+  </div>
+</body>
+</html>
