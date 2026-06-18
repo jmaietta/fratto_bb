@@ -327,10 +327,6 @@ a:focus-visible {
   overflow: hidden;
 }
 
-.hero-intro-text .hero-badge {
-  margin-bottom: 8px;
-}
-
 .hero-intro-text .hero-name {
   line-height: 0.95;
   word-break: break-word;
@@ -355,10 +351,6 @@ a:focus-visible {
     display: none;
   }
   
-  .hero-intro-text .hero-badge {
-    margin-bottom: 24px;
-  }
-  
   .hero-intro-text .name-first {
     font-size: clamp(48px, 12vw, 100px);
   }
@@ -377,44 +369,6 @@ a:focus-visible {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 10px;
-  background: rgba(0, 180, 160, 0.12);
-  border: 1px solid rgba(0, 180, 160, 0.3);
-  border-radius: 999px;
-  font-size: 10px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--teal);
-  margin-bottom: 24px;
-}
-
-@media (min-width: 480px) {
-  .hero-badge {
-    gap: 8px;
-    padding: 8px 14px;
-    font-size: 12px;
-    letter-spacing: 0.08em;
-  }
-}
-
-.badge-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--teal);
-  border-radius: 50%;
-  animation: pulse 2s ease infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(0.9); }
 }
 
 .hero-name {
@@ -1306,11 +1260,6 @@ a:focus-visible {
     font-size: 28px;
   }
   
-  .hero-badge {
-    font-size: 10px;
-    padding: 6px 10px;
-  }
-  
   .btn.large {
     padding: 12px 18px;
     font-size: 14px;
@@ -1578,13 +1527,6 @@ body {
 
 .hero-content {
   max-width: 760px;
-}
-
-.hero-badge {
-  background: rgba(7, 17, 31, 0.62);
-  border-color: rgba(23, 201, 178, 0.42);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(14px);
 }
 
 .name-first,

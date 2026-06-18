@@ -107,10 +107,6 @@
               alt="Thomas Fratto in Eckerd Tritons uniform" />
           </div>
           <div class="hero-intro-text">
-            <div class="hero-badge">
-              <span class="badge-dot"></span>
-              <span>Senior Infielder</span>
-            </div>
             <h1 class="hero-name">
               <span class="name-first">Thomas</span>
               <span class="name-last">Fratto</span>
@@ -919,7 +915,7 @@
     // Register Service Worker for PWA
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=21')
+        navigator.serviceWorker.register('./sw.js?v=22')
           .then((registration) => {
             console.log('SW registered:', registration.scope);
           })
