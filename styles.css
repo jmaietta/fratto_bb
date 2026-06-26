@@ -2184,14 +2184,6 @@ body {
   line-height: 1.45;
 }
 
-#summer-stats .stats-row {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
-#summer-stats .stats-row:last-child {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
 /* =========================================================
    HERO STRENGTHS — owner-confirmed calling cards only
    ========================================================= */

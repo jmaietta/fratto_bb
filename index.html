@@ -527,7 +527,6 @@
               <div class="stats-table">
                 <div class="stats-row">
                   <div class="stats-cell"><span class="cell-value">11</span><span class="cell-label">G</span></div>
-                  <div class="stats-cell"><span class="cell-value">40</span><span class="cell-label">PA</span></div>
                   <div class="stats-cell"><span class="cell-value">29</span><span class="cell-label">AB</span></div>
                   <div class="stats-cell"><span class="cell-value">4</span><span class="cell-label">R</span></div>
                   <div class="stats-cell"><span class="cell-value">2</span><span class="cell-label">H</span></div>
@@ -539,9 +538,9 @@
                   <div class="stats-cell"><span class="cell-value">0</span><span class="cell-label">3B</span></div>
                   <div class="stats-cell"><span class="cell-value">1</span><span class="cell-label">HR</span></div>
                   <div class="stats-cell"><span class="cell-value">8</span><span class="cell-label">BB</span></div>
-                  <div class="stats-cell"><span class="cell-value">3</span><span class="cell-label">HBP</span></div>
                 </div>
                 <div class="stats-row">
+                  <div class="stats-cell"><span class="cell-value">3</span><span class="cell-label">HBP</span></div>
                   <div class="stats-cell"><span class="cell-value">12</span><span class="cell-label">SO</span></div>
                   <div class="stats-cell"><span class="cell-value">0</span><span class="cell-label">SF</span></div>
                   <div class="stats-cell"><span class="cell-value">0</span><span class="cell-label">SB</span></div>
@@ -939,7 +938,7 @@
     // Register Service Worker for PWA
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=39')
+        navigator.serviceWorker.register('./sw.js?v=40')
           .then((registration) => {
             console.log('SW registered:', registration.scope);
           })
