@@ -23,118 +23,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="theme-bw.css" />
-
-  <style>
-    /* Modern UI Overrides */
-    :root {
-      --modern-bg: #0f172a;
-      --modern-card-bg: rgba(30, 41, 59, 0.6);
-      --modern-border: rgba(255, 255, 255, 0.1);
-      --modern-primary: #3b82f6;
-    }
-
-    body {
-      background-color: var(--modern-bg);
-      color: #e2e8f0;
-    }
-
-    /* Sticky Glassmorphism Topbar */
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--modern-border);
-    }
-
-    /* Gradient Hero Name */
-    .hero-name {
-      background: linear-gradient(135deg, #60a5fa, #818cf8, #c084fc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* Glassmorphism Cards */
-    .video-card, .stats-card, .info-card, .contact-card {
-      background: var(--modern-card-bg);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid var(--modern-border);
-      border-radius: 16px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    }
-
-    /* Hover Effects */
-    .video-card:hover, .info-card:hover, .contact-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-
-    /* Modern Buttons */
-    .btn.primary {
-      background: linear-gradient(135deg, var(--modern-primary), #2563eb);
-      border: none;
-      box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
-      transition: all 0.3s ease;
-    }
-
-    .btn.primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.45);
-    }
-
-    .btn.ghost {
-      border: 1px solid var(--modern-border);
-      background: rgba(255, 255, 255, 0.05);
-      transition: all 0.3s ease;
-    }
-
-    .btn.ghost:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.3);
-      transform: translateY(-2px);
-    }
-
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-    ::-webkit-scrollbar-track {
-      background: var(--modern-bg);
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #475569;
-      border-radius: 5px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #64748b;
-    }
-
-    /* Match info-list items to info-links items */
-    .info-list li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 16px;
-      margin-bottom: 8px;
-      background: #f7f7f7;
-      border: 1px solid #e2e2e2;
-      border-radius: var(--radius-sm);
-      font-size: 14px;
-      font-weight: 500;
-      transition: all var(--duration) var(--ease);
-    }
-    .info-list li:last-child {
-      margin-bottom: 0;
-      border-bottom: 1px solid #e2e2e2;
-      padding-bottom: 12px;
-    }
-  </style>
 
   <meta property="og:title" content="Thomas Fratto | Eckerd College Baseball Recruiting Profile" />
   <meta property="og:description" content="Left-handed-hitting senior infielder at Eckerd College (NCAA Division II). A disciplined hitter with an outstanding eye and power. Scouting video, full season-by-season stats, and direct contact." />
@@ -1028,28 +916,10 @@
       }
     })();
     
-    // Intersection Observer for scroll animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, observerOptions);
-    
-    document.querySelectorAll('.video-card, .info-card, .contact-card').forEach(el => {
-      observer.observe(el);
-    });
-
     // Register Service Worker for PWA
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=41')
+        navigator.serviceWorker.register('./sw.js?v=43')
           .then((registration) => {
             console.log('SW registered:', registration.scope);
           })
